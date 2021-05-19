@@ -1,0 +1,37 @@
+<disasterInfo>
+<info>
+<date>2021-04-23 00:00:00</date>
+<grade>2</grade>
+<intensity>4</intensity>
+<type>2</type>
+<picture>04231.png</picture>
+</info>
+<info>
+<date>2021-04-23 00:00:20</date>
+<grade>3</grade>
+<intensity>6</intensity>
+<type>2</type>
+<picture>04232.png</picture>
+</info>
+<info>
+<date>2021-04-23 00:01:20</date>
+<grade>4</grade>
+<intensity>6</intensity>
+<type>2</type>
+<picture>04233.png</picture>
+</info>
+<info>
+<date>2021-04-23 00:01:22</date>
+<grade>2</grade>
+<intensity>4</intensity>
+<type>2</type>
+<picture>04234.png</picture>
+</info>
+<info>
+<date>2021-04-23 00:01:25</date>
+<grade>6</grade>
+<intensity>6</intensity>
+<type>2</type>
+<picture>04234.png</picture>
+</info>
+</disasterInfo>

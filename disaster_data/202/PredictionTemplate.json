@@ -1,0 +1,41 @@
+{
+  "disasterInfo": {
+    "info": [
+      {
+        "date": "2021-04-23 00:00:05",
+        "grade": "2",
+        "intensity": "4",
+        "type": "1",
+        "picture": "04236.png"
+      },
+      {
+        "date": "2021-04-23 00:00:24",
+        "grade": "2",
+        "intensity": "7",
+        "type": "1",
+        "picture": "04237.png"
+      },
+      {
+        "date": "2021-04-23 00:02:29",
+        "grade": "6",
+        "intensity": "8",
+        "type": "1",
+        "picture": "04238.png"
+      },
+      {
+        "date": "2021-04-23 00:11:22",
+        "grade": "2",
+        "intensity": "4",
+        "type": "1",
+        "picture": "04239.png"
+      },
+      {
+        "date": "2021-04-23 00:21:25",
+        "grade": "6",
+        "intensity": "9",
+        "type": "1",
+        "picture": "042310.png"
+      }
+    ]
+  }
+}

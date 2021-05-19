@@ -1,0 +1,71 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body class="container">
+    <h1 class="breadcrumb my-4><li class="breadcrumb-item active">灾情信息管理</h1>
+    <form action="{% url 'data_manage:data_manage_show' %}" method="get">
+        <p>
+            选择地区：
+            <input type="text" id="area_name" name="area_name" placeholder="输入地区名称" value={{ area_name }}>
+        </p>
+        
+        <p>
+            起止日期：
+            <input type="date" name="start_time" value={{ start_time }}>
+            <input type="date" name="end_time" value={{ end_time }}>
+            <input type="submit" value="查询">
+        </p>
+    </form>    
+
+    <p>
+        评论列表：
+        <table class="table table-bordered">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>时间</th>
+                    <th>地点</th>
+                    <th>种类</th>
+                    <th>地震强度</th> 
+                    <th>来源</th>
+                </tr>
+            </thead>           
+            <tbody>
+            {% for one in data %}
+                <tr>
+                    <td>{{ one.datetime }}</td>
+                    <td>{{ one.area_id }}</td>
+                    <td>{{ one.category }}</td>
+                    <td>{{ one.note }}</td>
+                    <td>{{ one.reportingUnit }}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="pagination">
+            <span class="step-links">
+            {% if data.has_previous %}
+                <a href="?page=1&area_name={{ area_name }}&start_time={{ start_time }}&end_time={{ end_time }}" class="btn btn-info">&laquo; first</a>
+                <a href="?page={{ data.previous_page_number }}&area_name={{ area_name }}&start_time={{ start_time }}&end_time={{ end_time }}" class="btn btn-primary">previous</a>
+            {% endif %}
+
+            <span class="current ">
+                {% if data %}
+                Page {{ data.number }} of {{ data.paginator.num_pages }}.
+                {% endif %}
+            </span>
+
+            {% if data.has_next %}
+                <a href="?page={{ data.next_page_number }}&area_name={{ area_name }}&start_time={{ start_time }}&end_time={{ end_time }}" class="btn btn-primary">next</a>
+                <a href="?page={{ data.paginator.num_pages }}&area_name={{ area_name }}&start_time={{ start_time }}&end_time={{ end_time }}" class="btn btn-info">last &raquo;</a>
+            {% endif %}
+            </span>
+        </div>
+</body>
+</html>
